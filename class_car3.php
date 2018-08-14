@@ -1,16 +1,34 @@
 <?php
 
 class Car {
-    
+
+    var $ruedas ;
+    var $color = "Gris Artense";
+    var $puertas = 4 ;
+
     function MoverRuedas(){
-        echo "Ruedas movidas";
+        $this->ruedas = 4;
+    }
+
+    function CrearPuertas(){
+        $this->puertas = 6;
     }
 }
 
-if(method_exists("Car","MoverRuedas")) {
-    echo "Método MoverRuedas existe";
-}else{
-    
-    echo "Método MoverRuedas no existe";
-}
+$bmw = new Car();
+$bmw->MoverRuedas();
+echo "Color: " . $bmw->color ;
+echo "<br>";
+echo "Ruedas: " .$bmw->ruedas;
+echo "<br>";
+
+$camion = new Car();
+
+echo "Camión:" . "<br>";
+echo "Ruedas: " . $camion->ruedas = 10;
+echo "<br>";
+$camion->CrearPuertas();
+echo "Puertas: " . $camion->puertas;
+echo "<br>";
+
 ?>
